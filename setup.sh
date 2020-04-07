@@ -1,12 +1,18 @@
 #!/bin/bash
 
 #backup and copy .vimrc
-if [[ -e ~/.vimrc ]] && [[ `diff $(pwd)/.vimrc ~/.vimrc` ]]; then
+if [[ -e $HOME/.vimrc ]] && [[ `diff $(pwd)/.vimrc ~/.vimrc` ]]; then
   mv ~/.vimrc ~/.vimrc_backup
   cp $(pwd)/.vimrc ~/.vimrc
 fi
-if [[ ! -e ~/.vimrc ]]; then
+if [[ ! -e $HOME/.vimrc ]]; then
   cp $(pwd)/.vimrc ~/.vimrc
+fi
+
+#install vim-plug
+if [[ ! -e $HOME/.vim/autoload/plug.vim ]]; then
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
 #install oh-my-zsh
