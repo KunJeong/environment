@@ -9,15 +9,6 @@ if [[ ! -e ~/.vimrc ]]; then
   cp $(pwd)/.vimrc ~/.vimrc
 fi
 
-#backup and copy .zshrc
-if [[ -e ~/.zshrc ]] && [[ `diff $(pwd)/.zshrc ~/.zshrc` ]]; then
-  mv ~/.zshrc ~/.zshrc_backup
-  cp $(pwd)/.zshrc ~/.zshrc
-fi
-if [[ ! -e ~/.zshrc ]]; then
-  cp $(pwd)/.zshrc ~/.zshrc
-fi
-
 #install oh-my-zsh
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
   sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -31,3 +22,14 @@ fi
 if [[ ! -d $HOME/.oh-my-zsh/custom/themes/powerlevel10k ]]; then
   git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/powerlevel10k
 fi
+
+#backup and copy .zshrc
+if [[ -e ~/.zshrc ]] && [[ `diff $(pwd)/.zshrc ~/.zshrc` ]]; then
+  mv ~/.zshrc ~/.zshrc_backup
+  cp $(pwd)/.zshrc ~/.zshrc
+fi
+if [[ ! -e ~/.zshrc ]]; then
+  cp $(pwd)/.zshrc ~/.zshrc
+fi
+
+
