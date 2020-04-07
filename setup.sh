@@ -14,6 +14,6 @@ if [[ -e ~/.zshrc ]] && [[ `diff $(pwd)/.zshrc ~/.zshrc` ]]; then
   mv ~/.zshrc ~/.zshrc_backup
   cp $(pwd)/.zshrc ~/.zshrc
 fi
-if [[ ! -e ~/.vimrc ]]; then
+if [[ ! -e ~/.zshrc ]]; then
   cp $(pwd)/.zshrc ~/.zshrc
 fi
