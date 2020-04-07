@@ -10,9 +10,6 @@ if [[ ! -e $HOME/.vimrc ]]; then
 fi
 
 #copy plugin source files
-if [[ ! -d $HOME/.vim ]]; then
-  mkdir ~/.vim
-fi
 cp -R $(pwd)/.vim ~
 
 #install oh-my-zsh
