@@ -10,12 +10,15 @@ if [[ ! -e $HOME/.vimrc ]]; then
 fi
 
 #copy plugin source files
+if [[ ! -d $HOME/.vim ]]; then
+  mkdir ~/.vim
+fi
 if [[ ! -e $HOME/.vim/plug.vim ]]; then
-  cp $(pwd)/.vim/plug.vim ~/vim/plug.vim
+  cp $(pwd)/.vim/plug.vim ~/.vim/plug.vim
 fi
 
 if [[ ! -e $HOME/.vim/plugins_config.vim ]]; then
-  cp $(pwd)/.vim/plug_config.vim ~/vim/plug_config.vim
+  cp $(pwd)/.vim/plug_config.vim ~/.vim/plug_config.vim
 fi
 
 
