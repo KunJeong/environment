@@ -9,11 +9,15 @@ if [[ ! -e $HOME/.vimrc ]]; then
   cp $(pwd)/.vimrc ~/.vimrc
 fi
 
-#install vim-plug
-if [[ ! -e $HOME/.vim/autoload/plug.vim ]]; then
-  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+#copy plugin source files
+if [[ ! -e $HOME/.vim/plug.vim ]]; then
+  cp $(pwd)/.vim/plug.vim ~/vim/plug.vim
 fi
+
+if [[ ! -e $HOME/.vim/plugins_config.vim ]]; then
+  cp $(pwd)/.vim/plug_config.vim ~/vim/plug_config.vim
+fi
+
 
 #install oh-my-zsh
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
@@ -37,5 +41,3 @@ fi
 if [[ ! -e ~/.zshrc ]]; then
   cp $(pwd)/.zshrc ~/.zshrc
 fi
-
-
