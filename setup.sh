@@ -18,7 +18,7 @@ if [[ ! -e $HOME/.vim/plug.vim ]]; then
 fi
 
 if [[ ! -e $HOME/.vim/plugins_config.vim ]]; then
-  cp $(pwd)/.vim/plug_config.vim ~/.vim/plug_config.vim
+  cp $(pwd)/.vim/plugins_config.vim ~/.vim/plugins_config.vim
 fi
 
 
