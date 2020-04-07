@@ -13,14 +13,7 @@ fi
 if [[ ! -d $HOME/.vim ]]; then
   mkdir ~/.vim
 fi
-if [[ ! -e $HOME/.vim/plug.vim ]]; then
-  cp $(pwd)/.vim/plug.vim ~/.vim/plug.vim
-fi
-
-if [[ ! -e $HOME/.vim/plugins_config.vim ]]; then
-  cp $(pwd)/.vim/plugins_config.vim ~/.vim/plugins_config.vim
-fi
-
+cp -R $(pwd)/.vim ~
 
 #install oh-my-zsh
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
