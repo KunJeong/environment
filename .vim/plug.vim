@@ -13,7 +13,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'souffle-lang/souffle.vim'
-Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer' }
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"Plug 'Valloric/YouCompleteMe', { 'do': 'python3 ./install.py --clang-completer' }
+"Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'vim-syntastic/syntastic'
 call plug#end()
